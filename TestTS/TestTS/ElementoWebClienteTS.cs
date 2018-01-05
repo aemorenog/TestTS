@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,9 @@ namespace TestTS
 
         [FindsBy(How = How.LinkText, Using = "Cartola de Canje")]
         public IWebElement menuCartolaCanje { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "lista_comercios")]
+        public IWebElement comboboxComercios { get; set; }
 
         [FindsBy(How = How.ClassName, Using = "volver_")]
         public IWebElement btnVolverOpcionCanjearPuntos { get; set; }
@@ -56,7 +60,7 @@ namespace TestTS
         {
             System.Threading.Thread.Sleep(1400);
 
-            menuEstadosInscripcion.Click();
+            menuResumenPuntosPeriodo.Click();
 
             System.Threading.Thread.Sleep(2000);
         }
@@ -68,6 +72,21 @@ namespace TestTS
             menuCartolaCanje.Click();
 
             System.Threading.Thread.Sleep(1400);
+        }
+
+        public void validarValoresComboPeso()
+        {
+            SelectElement selectValueComercios = new SelectElement(comboboxComercios);
+
+            IList<IWebElement> listaCombo = selectValueComercios.Options;
+
+            int iSize = listaCombo.Count;
+
+            for (int i = 0; i > iSize; i++)
+            {
+                String sValue = listaCombo.ElementAt(i).Text;
+                Console.WriteLine(sValue);
+            }
         }
 
     }
