@@ -48,11 +48,13 @@ namespace TestTS
 
             paginaBTX.IngresarCanjearPuntos();
 
-            paginaBTX.IngresarEstadosInscripcion();
+            paginaBTX.validarValoresComboPeso();
 
-            paginaBTX.IngresarResumenPuntosPeriodo();
+            //paginaBTX.IngresarEstadosInscripcion();
 
-            paginaBTX.IngresarCartolaCanje();
+            //paginaBTX.IngresarResumenPuntosPeriodo();
+
+            //paginaBTX.IngresarCartolaCanje();
 
         }
     }

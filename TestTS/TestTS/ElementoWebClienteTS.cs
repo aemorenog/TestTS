@@ -42,7 +42,7 @@ namespace TestTS
 
             System.Threading.Thread.Sleep(1400);
 
-            btnVolverOpcionCanjearPuntos.Click();
+            //btnVolverOpcionCanjearPuntos.Click();
 
             System.Threading.Thread.Sleep(2000);
         }
@@ -84,7 +84,7 @@ namespace TestTS
 
             for (int i = 0; i > iSize; i++)
             {
-                String sValue = listaCombo.ElementAt(i).Text;
+                string sValue = listaCombo.ElementAt(i).Text;
                 Console.WriteLine(sValue);
             }
         }
