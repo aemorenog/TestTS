@@ -60,5 +60,18 @@ namespace TestTS
             //paginaBTX.IngresarCartolaCanje();
 
         }
+
+        [Test]
+        public void ValidarBtnComoCrearClave()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            js.ExecuteScript("window.scrollBy(0,450);", "");
+
+            paginaBT.IngresaCrearTuclave();
+
+        }
     }
 }
