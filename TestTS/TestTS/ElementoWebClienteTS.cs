@@ -3,6 +3,7 @@ using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,12 +35,17 @@ namespace TestTS
         [FindsBy(How = How.ClassName, Using = "volver_")]
         public IWebElement btnVolverOpcionCanjearPuntos { get; set; }
 
+        [FindsBy(How = How.Id, Using = "verdetalle")]
+        public IWebElement btnVerDetalle { get; set; }
+
+        
+
         public void IngresarCanjearPuntos()
         {
             System.Threading.Thread.Sleep(1400);
 
             menuCanjearPuntos.Click();
-
+               
             System.Threading.Thread.Sleep(1400);
 
             //btnVolverOpcionCanjearPuntos.Click();
@@ -85,7 +91,7 @@ namespace TestTS
             for (int i = 0; i > iSize; i++)
             {
                 string sValue = listaCombo.ElementAt(i).Text;
-                Console.WriteLine(sValue);
+                Debug.WriteLine(sValue);
             }
         }
 
