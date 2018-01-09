@@ -25,7 +25,7 @@ namespace TestTS
         public void initialize()
         {
             //Usameos nuestra variable global webdriver y le asignamos que sea de tipo Chrome ()
-            PropiedadColeccionDriver.driver = new FirefoxDriver();
+            PropiedadColeccionDriver.driver = new ChromeDriver();
 
             //Maximizamos la pantalla que se abrira del navegador
             PropiedadColeccionDriver.driver.Manage().Window.Maximize();
@@ -112,5 +112,21 @@ namespace TestTS
 
         }
 
+        [Test]
+        public void ValidarBtnUsaPuntosEnBeneficiosTarjetas()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            js.ExecuteScript("window.scrollBy(0,650);", "");
+
+            paginaBT.IngresaUsaPuntosEnBeneficiosTarjetas();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
+
+        }
     }
 }

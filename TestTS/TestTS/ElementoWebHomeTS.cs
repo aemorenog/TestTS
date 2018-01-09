@@ -45,7 +45,7 @@ namespace TestTS
         [FindsBy(How = How.XPath, Using = "//*[@id='top']/body/div[1]/div/div[2]/div/div/div/div[2]/section[2]/div[1]/div[2]/a")]
         public IWebElement btnUsaPuntosDondeTuQuieras { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='top]/body/div[1]/div/div[2]/div/div/div/div[2]/section[2]/div[2]/div[2]/a")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='top']/body/div[1]/div/div[2]/div/div/div/div[2]/section[2]/div[2]/div[2]/a")]
         public IWebElement btnUsaPuntosEnBeneficiosTarjetas { get; set; }
 
 
