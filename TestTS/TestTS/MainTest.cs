@@ -15,6 +15,8 @@ namespace TestTS
 {
     class MainTest
     {
+        string urlPrueba = "https://todosumacertificacion.ingesmart.cl/";
+
         static void Main(string[] args)
         {
         }
@@ -28,7 +30,7 @@ namespace TestTS
             //Maximizamos la pantalla que se abrira del navegador
             PropiedadColeccionDriver.driver.Manage().Window.Maximize();
 
-            string urlPrueba = "https://todosumacertificacion.ingesmart.cl/";
+            //string urlPrueba = "https://todosumacertificacion.ingesmart.cl/";
 
             //Indicamos a nuestro driver a que página ir (página inicial o primera carga)
             PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
@@ -93,6 +95,22 @@ namespace TestTS
             PropiedadColeccionDriver.driver.Navigate().Back();
         }
 
+        [Test]
+        public void ValidarBtnUsaPuntosDondeTuQuieres()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            js.ExecuteScript("window.scrollBy(0,650);", "");
+
+            paginaBT.IngresaUsaPuntosDondeTuQuieres();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
+
+        }
 
     }
 }

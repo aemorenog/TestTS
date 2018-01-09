@@ -39,17 +39,21 @@ namespace TestTS
         [FindsBy(How = How.XPath, Using = "//*[@id='top']/body/div[1]/div/div[2]/div/div/div/div[2]/section[1]/div[1]/div[2]/a")]
         public IWebElement btnComoCrearTuClave { get; set; }
         
-        [FindsBy(How = How.XPath, Using = "//*[@id="+"top"+"]/body/div[1]/div/div[2]/div/div/div/div[2]/section[1]/div[2]/div[2]/a")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='top']/body/div[1]/div/div[2]/div/div/div/div[2]/section[1]/div[2]/div[2]/a")]
         public IWebElement btnConsultaTusPuntosAcumulados { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//*[@id="+"top"+"]/body/div[1]/div/div[2]/div/div/div/div[2]/section[2]/div[1]/div[2]/a")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='top']/body/div[1]/div/div[2]/div/div/div/div[2]/section[2]/div[1]/div[2]/a")]
         public IWebElement btnUsaPuntosDondeTuQuieras { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//*[@id="+"top"+"]/body/div[1]/div/div[2]/div/div/div/div[2]/section[2]/div[2]/div[2]/a")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='top]/body/div[1]/div/div[2]/div/div/div/div[2]/section[2]/div[2]/div[2]/a")]
         public IWebElement btnUsaPuntosEnBeneficiosTarjetas { get; set; }
 
 
-
+        /// <summary>
+        /// Método que realiza validación de login de TS
+        /// </summary>
+        /// <param name="rut"></param>
+        /// <param name="password"></param>
 
         public void Login(string rut, string password)
         {
@@ -66,12 +70,19 @@ namespace TestTS
             btnIngresar.Click();
         }
 
+        /// <summary>
+        ///  Método que ingresa a la opción ¿Como crear tu Clave?
+        /// </summary>
         public void IngresaCrearTuclave()
         {
             System.Threading.Thread.Sleep(1400);
 
             btnComoCrearTuClave.Click();
         }
+
+        /// <summary>
+        ///  Método que ingresa a la opción Consulta tus puntos acumulados
+        /// </summary>
 
         public void IngresarConsultaPuntosAcumulados()
         {
@@ -80,6 +91,10 @@ namespace TestTS
             btnConsultaTusPuntosAcumulados.Click();
         }
 
+        /// <summary>
+        ///  Método que ingresa a la opción Usa tus puntos donde tu quieras
+        /// </summary>
+
         public void IngresaUsaPuntosDondeTuQuieres()
         {
             System.Threading.Thread.Sleep(1400);
@@ -87,13 +102,17 @@ namespace TestTS
             btnUsaPuntosDondeTuQuieras.Click();
         }
 
-        public void IngresaUsaPuntosEnBT()
+        /// <summary>
+        ///  Método que ingresa a la opción Usa tus puntos en BeneficiosTarjetas.cl
+        /// </summary>
+
+        public void IngresaUsaPuntosEnBeneficiosTarjetas()
         {
             System.Threading.Thread.Sleep(1400);
 
             btnUsaPuntosEnBeneficiosTarjetas.Click();
         }
 
-
+        
     }
 }
