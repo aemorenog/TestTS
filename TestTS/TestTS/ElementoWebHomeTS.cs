@@ -27,6 +27,9 @@ namespace TestTS
         [FindsBy(How = How.Id, Using = "showPopup2")]
         public IWebElement LinkVerEjemplo { get; set; }
 
+        [FindsBy(How = How.ClassName, Using = "close")]
+        public IWebElement btnCerrarPopupVerEjemplo { get; set; }
+
         [FindsBy(How = How.Id, Using = "crear-clave")]
         public IWebElement LinkCrearClave { get; set; }
 
@@ -44,6 +47,8 @@ namespace TestTS
 
         [FindsBy(How = How.XPath, Using = "//*[@id="+"top"+"]/body/div[1]/div/div[2]/div/div/div/div[2]/section[2]/div[2]/div[2]/a")]
         public IWebElement btnUsaPuntosEnBeneficiosTarjetas { get; set; }
+
+
 
 
         public void Login(string rut, string password)
@@ -88,5 +93,7 @@ namespace TestTS
 
             btnUsaPuntosEnBeneficiosTarjetas.Click();
         }
+
+
     }
 }

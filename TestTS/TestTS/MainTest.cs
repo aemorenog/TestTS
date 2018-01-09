@@ -72,6 +72,27 @@ namespace TestTS
 
             paginaBT.IngresaCrearTuclave();
 
+            System.Threading.Thread.Sleep(1700);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
         }
+
+        [Test]
+        public void ValidarBtnConsultaPuntosAcumulados()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            js.ExecuteScript("window.scrollBy(0,450);", "");
+
+            paginaBT.IngresarConsultaPuntosAcumulados();
+
+            System.Threading.Thread.Sleep(1700);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+        }
+
+
     }
 }
