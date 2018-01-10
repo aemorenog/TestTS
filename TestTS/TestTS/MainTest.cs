@@ -37,7 +37,7 @@ namespace TestTS
         }
 
         [Test]
-        public void LoginBT()
+        public void TS001_LoginTS()
         {
             ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
 
@@ -64,7 +64,24 @@ namespace TestTS
         }
 
         [Test]
-        public void ValidarBtnComoCrearClave()
+        public void TS001FAL_LoginTS()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            ElementoWebClienteTS paginaBTX = new ElementoWebClienteTS();
+
+            string rut = "100784289";
+
+            string clave = "";
+
+            paginaBT.Login(rut, clave);
+
+            System.Threading.Thread.Sleep(6000);
+
+        }
+
+        [Test]
+        public void TS002_ValidarBtnComoCrearClave()
         {
             ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
 
@@ -80,7 +97,7 @@ namespace TestTS
         }
 
         [Test]
-        public void ValidarBtnConsultaPuntosAcumulados()
+        public void TS003_ValidarBtnConsultaPuntosAcumulados()
         {
             ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
 
@@ -96,7 +113,7 @@ namespace TestTS
         }
 
         [Test]
-        public void ValidarBtnUsaPuntosDondeTuQuieres()
+        public void TS004_ValidarBtnUsaPuntosDondeTuQuieres()
         {
             ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
 
@@ -113,7 +130,7 @@ namespace TestTS
         }
 
         [Test]
-        public void ValidarBtnUsaPuntosEnBeneficiosTarjetas()
+        public void TS005_ValidarBtnUsaPuntosEnBeneficiosTarjetas()
         {
             ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
 
@@ -127,6 +144,79 @@ namespace TestTS
 
             PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
 
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
+        [Test]
+        public void TS006_ValidarIcoHomeTS()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            paginaBT.IngresarIcoHomeTS();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void TS007_ValidarLinkQueEsTodoSuma()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            paginaBT.IngresarLinkQueEsTodoSuma();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void TS008_ValidarLinkComoAcumularPuntos()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            paginaBT.IngresarLinkComoAcumularPuntos();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void TS009_ValidarLinkComoCanjear()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            paginaBT.IngresarLinkComoCanjear();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
+        [Test]
+        public void TS010_ValidarLinkPreguntasFrecuentes()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            paginaBT.IngresarLinkPreguntasFrecuentes();
+
+            System.Threading.Thread.Sleep(6000);
+
+            PropiedadColeccionDriver.driver.Navigate().GoToUrl(urlPrueba);
+
+            PropiedadColeccionDriver.driver.Quit();
         }
     }
 }
