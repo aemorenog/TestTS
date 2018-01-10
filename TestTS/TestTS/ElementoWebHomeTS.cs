@@ -91,34 +91,34 @@ namespace TestTS
         [FindsBy(How = How.PartialLinkText, Using = "¿Cuáles compras acumulan puntos? :")]
         public IWebElement Pregunta8 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Cuáles compras no acumulan puntos?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Cuáles compras no acumulan puntos?:")]
         public IWebElement Pregunta9 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "En caso de tener varias Tarjetas de Crédito, ¿todas acumulan puntos?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "En caso de tener varias Tarjetas de Crédito, ¿todas acumulan puntos?:")]
         public IWebElement Pregunta10 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Cuál de mis tarjetas me permiten inscribir  y realizar un canje?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Cuál de mis tarjetas me permiten inscribir y realizar un canje?:")]
         public IWebElement Pregunta11 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Acumulan puntos las Tarjetas de Crédito Adicionales?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Acumulan puntos las Tarjetas de Crédito Adicionales?:")]
         public IWebElement Pregunta12 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Por qué no se abona en mi cuenta el canje solicitado cuando la compra posterior es inferior al monto de puntos inscritos?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Por qué no se abona en mi cuenta el canje solicitado cuando la compra posterior es inferior al monto de puntos inscritos?:")]
         public IWebElement Pregunta13 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Qué pasa con mis puntos cuando mi Tarjeta de Crédito está bloqueada?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Qué pasa con mis puntos cuando mi Tarjeta de Crédito está bloqueada?:")]
         public IWebElement Pregunta14 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Qué pasa con mis puntos cuando mi Tarjeta de Crédito es cerrada?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Qué pasa con mis puntos cuando mi Tarjeta de Crédito es cerrada?:")]
         public IWebElement Pregunta15 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Qué pasa con mis puntos cuando pierdo o me roban mi Tarjeta de Crédito?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Qué pasa con mis puntos cuando pierdo o me roban mi Tarjeta de Crédito?:")]
         public IWebElement Pregunta16 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Cuál es la vigencia de los puntos?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Cuál es la vigencia de los puntos?:")]
         public IWebElement Pregunta17 { get; set; }
 
-        [FindsBy(How = How.PartialLinkText, Using = "¿Cuáles son los canales de atención disponibles para atender mis consultas relacionadas con TodoSuma?: ")]
+        [FindsBy(How = How.PartialLinkText, Using = "¿Cuáles son los canales de atención disponibles para atender mis consultas relacionadas con TodoSuma?:")]
         public IWebElement Pregunta18 { get; set; }
 
         [FindsBy(How = How.PartialLinkText, Using = "¿Cuáles son los comercios que pertenecen a cada rubro?:")]
@@ -129,6 +129,9 @@ namespace TestTS
 
         [FindsBy(How = How.PartialLinkText, Using = "¿Qué pasa con mis puntos si tengo una deuda de mi tarjeta de crédito superior a los 75 días?")]
         public IWebElement Pregunta21 { get; set; }
+
+        [FindsBy(How = How.PartialLinkText, Using = "¿Además de la inscripción de puntos en todosuma.cl, que debo hacer para realizar el canje de puntos?")]
+        public IWebElement Pregunta22 { get; set; }
 
         /// <summary>
         /// Método que realiza validación de login de TS
@@ -255,6 +258,84 @@ namespace TestTS
             System.Threading.Thread.Sleep(1400);
 
             Pregunta4.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta5.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta6.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta7.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta8.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta9.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta10.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta11.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta12.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta13.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta13.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta14.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta14.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta15.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta17.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta18.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta19.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta20.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta21.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta22.Click();
+
+            System.Threading.Thread.Sleep(1400);
         }
 
     }
