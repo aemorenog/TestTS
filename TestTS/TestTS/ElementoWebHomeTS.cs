@@ -242,9 +242,20 @@ namespace TestTS
 
             LinkPreguntasFrecuentes.Click();
 
-            LinkComoCrearmiClave.Click();
-        }
+            Pregunta1.Click();
 
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta2.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta3.Click();
+
+            System.Threading.Thread.Sleep(1400);
+
+            Pregunta4.Click();
+        }
 
     }
 }
