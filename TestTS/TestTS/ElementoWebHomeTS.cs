@@ -60,10 +60,14 @@ namespace TestTS
         [FindsBy(How = How.LinkText, Using = "¿Cómo canjear?")]
         public IWebElement LinkComoCanjear { get; set; }
 
+        [FindsBy(How = How.ClassName, Using = "solicita-tarjeta")]
+        public IWebElement btnSolicitaTuTarjetaCredito { get; set; }
+        
+
         /// <summary>
         /// Preguntas Frecuentes
         /// </summary>
-        
+
         [FindsBy(How = How.LinkText, Using = "Preguntas Frecuentes")]
         public IWebElement LinkPreguntasFrecuentes { get; set; }
 
@@ -336,6 +340,23 @@ namespace TestTS
             Pregunta22.Click();
 
             System.Threading.Thread.Sleep(1400);
+        }
+
+        public void IngresarVerEjemplo()
+        {
+            LinkVerEjemplo.Click();
+
+            System.Threading.Thread.Sleep(3000);
+        }
+
+        public void CerrarVentanaVerEjemplo()
+        {
+            btnCerrarPopupVerEjemplo.Click();
+        }
+
+        public void IngresarSolicitaTuTarjetaCrédito()
+        {
+            btnSolicitaTuTarjetaCredito.Click();
         }
 
     }

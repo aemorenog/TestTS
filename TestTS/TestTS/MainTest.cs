@@ -218,5 +218,44 @@ namespace TestTS
 
             PropiedadColeccionDriver.driver.Quit();
         }
+
+        [Test]
+        public void TS011_ValidarLinkVerEjemplo()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            paginaBT.IngresarVerEjemplo();
+
+            //IAlert alerta = PropiedadColeccionDriver.driver.SwitchTo().Alert();
+
+            js.ExecuteScript("alert.scrollBy(0,650);", "");
+
+            System.Threading.Thread.Sleep(6000);
+
+            js.ExecuteScript("alert.scrollBy(0,-650);", "");
+
+            paginaBT.CerrarVentanaVerEjemplo();
+
+            System.Threading.Thread.Sleep(1200);
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
+        [Test]
+        public void TS012_ValidarBtnSolicitarTuTarjetaAca()
+        {
+            ElementoWebHomeTS paginaBT = new ElementoWebHomeTS();
+
+            paginaBT.IngresarSolicitaTuTarjetaCrédito();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles[1]).Close();
+
+
+        }
     }
 }
