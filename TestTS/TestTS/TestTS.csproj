@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ElementoWebClienteTS.cs" />
+    <Compile Include="ElementoWebCrearClave.cs" />
     <Compile Include="ElementoWebHomeTS.cs" />
     <Compile Include="MainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
